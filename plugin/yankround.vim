@@ -38,7 +38,7 @@ let g:_yankround_stop_caching = 0
 
 aug yankround
   autocmd!
-  autocmd CursorMoved *   call Yankround_append()
+  autocmd TextYankPost *   call Yankround_append()
   autocmd ColorScheme *   call s:define_region_hl()
   autocmd VimLeavePre *   call s:_persistent()
   autocmd CmdwinEnter *   call yankround#on_cmdwinenter()
